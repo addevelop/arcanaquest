@@ -1,6 +1,7 @@
 import { Attack } from "./Attack";
 
 interface Character{
+    id: number;
     name : string;
     picture : string;
     profil : string;

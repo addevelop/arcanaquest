@@ -1,12 +1,12 @@
-import { Attack } from "./Attack";
+import IAttack from "./Attack";
 
-interface Character{
+interface ICharacter{
     id: number;
     name : string;
     picture : string;
     profil : string;
     life: number;
-    attack : Attack
+    attack : IAttack[];
 }
 
-export type {Character}
+export default ICharacter;

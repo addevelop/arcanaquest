@@ -1,4 +1,4 @@
-interface Attack{
+interface IAttack{
     id: number; 
     name : string; 
     damage_min: number; 
@@ -8,4 +8,4 @@ interface Attack{
 
 }
 
-export type {Attack}
+export default IAttack;

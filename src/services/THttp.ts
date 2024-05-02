@@ -1,43 +1,20 @@
 import { ATTACKDATA, CHARACTERDATA, REGENERATIONDATA } from "../constantes/data";
 import { ATTACK, CHARACTER, REGENERATION } from "../constantes/nameData";
-
+import characters from "../data/characters.json";
+import attacks from "../data/attacks.json";
+import regenerations from "../data/regenerations.json"
 class THttp {
-    static async getData(nameData: string): Promise<any>
+    static async getData(nameData: string)
     {
-
-        console.log("Debut");
         switch(nameData){
             case CHARACTER:{
-                try {
-                    const response = await fetch(CHARACTERDATA);
-                    const jsonData = await response.json();
-
-                    return jsonData;
-                } catch (error) {
-                    console.error('Erreur lors de la récupération des données JSON:', error);
-                    throw error;
-                }
+                return characters || [];
             }
             case ATTACK: {
-                try {
-                    const response = await fetch(ATTACKDATA);
-                    const jsonData = await response.json();
-
-                    return jsonData;
-                } catch (error) {
-                    console.error('Erreur lors de la récupération des données JSON:', error);
-                    throw error;
-                }
+                return attacks || [];
             }
             case REGENERATION: {
-                try {
-                    const response = await fetch(REGENERATIONDATA);
-                    const jsonData = await response.json();
-                    return jsonData;
-                } catch (error) {
-                    console.error('Erreur lors de la récupération des données JSON:', error);
-                    throw error;
-                }
+                return regenerations || [];
             }
         }
     }

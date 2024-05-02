@@ -1,8 +1,10 @@
 interface Attack{
     id: number; 
     name : string; 
-    damage: number; 
+    damage_min: number; 
+    damage_max: number; 
     picture : string; 
+    time_reg : number; 
 
 }
 

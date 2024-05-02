@@ -1,0 +1,28 @@
+{
+  "characters": [
+    {
+        "id": 1,
+      "name": "Guerrier X",
+      "picture": "guerrier.png",
+      "profil": "Puissant combattant spécialisé dans le corps à corps.",
+      "life": 100,
+      "attacks": [1, 2]
+    },
+    {
+        "id": 2,
+      "name": "Mage Y",
+      "picture": "mage.png",
+      "profil": "Utilisateur de la magie, capable de lancer de puissants sorts.",
+      "life": 80,
+      "attacks": [3, 4]
+    },
+    {
+        "id": 3,
+      "name": "Archer Z",
+      "picture": "archer.png",
+      "profil": "Maître de l'arc et des flèches, agile et précis.",
+      "life": 90,
+      "attacks": [5, 6]
+    }
+  ]
+}

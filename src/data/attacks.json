@@ -1,0 +1,54 @@
+{
+    "attacks": [
+        {
+            "id":1,
+          "name": "Coup d'épée",
+          "damage_min": 20,
+        "damage_max": 30,
+        "time_reg": 1000
+
+        },
+        {
+            "id":2,
+          "name": "Frappe lourde",
+          "damage-min": 30,
+        "damage_max": 40,
+        "time_reg": 1000
+
+
+        },
+        {
+            "id":3,
+          "name": "Boule de feu",
+          "damage-min": 41,
+          "damage-max": 46,
+        "time_reg": 1000
+
+        },
+        {
+            "id":4,
+          "name": "Eclair magique",
+          "damage_min": 47,
+          "damage_max": 49,
+        "time_reg": 1000
+
+        },
+        {
+            "id": 5,
+          "name": "Tir rapide",
+          "damage_min": 50,
+          "damage_max": 55,
+        "time_reg": 1000
+
+        },
+        {
+            "id": 6,
+          "name": "Flèche empoisonnée",
+          "damage_min": 56,
+          "damage-max": 60,
+        "time_reg": 1000
+
+        }
+    ]
+    
+}

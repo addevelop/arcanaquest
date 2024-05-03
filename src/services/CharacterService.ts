@@ -40,7 +40,29 @@ class CharacterService
             {
                 const characters = data.characters as ICharacter[];
                 const character = characters.find(char => char.id === id);
-                return character;
+
+                if(character)
+                {
+                    if (character.attacks && Array.isArray(character.attacks)) 
+                    {
+                        const attacksData = await AttackService.getAttacks();
+
+                        if(attacksData)
+                        {
+                                const attacks: IAttack[] = attacksData;
+                                const characterAttacks = character.attacks.map(attackId => {
+                                return attacks.find(attack => attack.id === attackId);
+                                });
+
+                                const characterWithAttacks: ICharacter = {
+                                ...character,
+                                attacks: characterAttacks as IAttack[]
+                                }
+                                return characterWithAttacks;
+                        }
+                    }
+                }
+                return undefined;
             }
             else
             {

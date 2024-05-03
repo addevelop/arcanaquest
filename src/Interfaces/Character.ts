@@ -6,7 +6,7 @@ interface ICharacter{
     picture : string;
     profil : string;
     life: number;
-    attack : IAttack[];
+    attacks : any[];
 }
 
 export default ICharacter;

@@ -22,8 +22,36 @@ function Fight() {
         console.log(players);
 
     }, [players])
+
+    const handleAttack = () => {
+      
+    }
   return (
-    <div>fight</div>
+    <div>
+      { players.map((player, index) =>  (
+        <section key={index}>
+          <div>
+            {player.character?.life}
+          </div>
+          <div>
+            {player.character?.name}
+          </div>
+          <select>
+            {player.character?.attacks.map((attack, index) => (
+              <option key={`attack-${attack.id}`} value={attack.id}>{attack.name}</option>
+            ))}
+          </select>
+          <div>
+            <button onClick={handleAttack}>attack</button>
+          </div>
+        </section>
+      ))}
+      <div>
+        <section>
+          
+        </section>
+      </div>
+    </div>
   )
 }
 

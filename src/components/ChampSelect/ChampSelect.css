@@ -1,13 +1,9 @@
-h1{
-    text-align: center;
-    font-size: 5em;
-    color: black;
-    margin-top: 20px;
-}
-
 h2{
     text-align: center;
-    color: black;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    font-family: "Jersey 10", sans-serif;
+    margin-top: -100px;
 }
 
 .boxChamp{

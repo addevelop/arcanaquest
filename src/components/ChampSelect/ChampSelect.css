@@ -13,6 +13,12 @@ h2{
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
+.boxPixel{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
 .boxChamp :hover{
     box-shadow: rgba(191, 136, 136, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }

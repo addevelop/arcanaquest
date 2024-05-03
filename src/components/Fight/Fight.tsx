@@ -140,7 +140,7 @@ function Fight() {
             {player.character?.name}
           </div>
           <div>
-            <img className="boxChamp" src={ `./img/${player.character?.picture}`} alt="champion"/>
+            <img className="boxPixel" src={ `./img/${player.character?.pixel}`} alt="champion"/>
           </div>
           <select onChange={(e) => handleChangeAttack(e.target.value, player)}>
             {player.character?.attacks.map((attack, index) => (

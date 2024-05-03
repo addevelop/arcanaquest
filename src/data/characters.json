@@ -4,6 +4,7 @@
         "id": 1,
       "name": "Isaac",
       "picture": "IsaacART.png",
+      "pixel": "Isaac.png",
       "profil": "Puissant combattant spécialisé dans le corps à corps.",
       "life": 100,
       "attacks": [1, 2]
@@ -12,6 +13,7 @@
         "id": 2,
       "name": "Ryuk",
       "picture": "RyukART.png",
+      "pixel": "Ryuk.png",
       "profil": "Utilisateur de la magie, capable de lancer de puissants sorts.",
       "life": 80,
       "attacks": [7, 8]
@@ -20,6 +22,7 @@
         "id": 3,
       "name": "Sans",
       "picture": "SansART.png",
+      "pixel": "Sans.png",
       "profil": "Maître de l'arc et des flèches, agile et précis.",
       "life": 90,
       "attacks": [5, 6]
@@ -29,6 +32,7 @@
       "id": 4,
     "name": "Pikachu",
     "picture": "PikachuART.png",
+    "pixel": "Pikachu.png",
     "profil": "Pika pika",
     "life": 90,
     "attacks": [3, 4]

@@ -22,7 +22,10 @@ function ChampSelect() {
     }, [characters])
   return (
     <div>
-        <h1>ArcanaQuest</h1>
+        <div className='title'>
+            <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jacquard+24+Charted&family=Jersey+10&display=swap" rel="stylesheet"></link>
+            <h1>Arcanaquest</h1>
+        </div>
 
         <h2>Choisissez votre personnage</h2>
 
@@ -30,11 +33,13 @@ function ChampSelect() {
             {characters.map((character) => (
             <div key={character.id}>{character.name}
                 
-                <img className="boxChamp" src={ `./img/${character.picture}`} alt="champion"/>
+                
+                <button onClick={() => {window.location.href = '/fight'}}><img className="boxChamp" src={ `./img/${character.picture}`} alt="champion"/></button>
                 
             </div>
             ))}  
-        </div>    
+        </div>
+        
         
 
     </div>

@@ -4,6 +4,7 @@ import CharacterService from '../../services/CharacterService'
 import IAttack from '../../Interfaces/Attack'
 import AttackService from '../../services/AttackService'
 import ICharacter from '../../Interfaces/Character'
+import './FightStyle.css'
 function Fight() {
     
     const [players, setPlayers] = useState<Player[]>([])
@@ -123,15 +124,15 @@ function Fight() {
 
     }
   return (
-    <div>
+    <div  className='nameCharacter'>
       { players.map((player, index) =>  (
         <section key={index}>
           <div>
-            {player.character?.life}
+            {player.character?.life}<img className="heart" src={ "./img/heart.png"} alt="coeur"/>
           </div>
           <div>
               { player.character?.life && player.character.life <+ 0 && (
-                  <div>
+                  <div className='over'>
                       Game over
                   </div>
               )}
@@ -153,7 +154,7 @@ function Fight() {
           </select>
           { player.turnToPlay && player.character?.life && player.character?.life >0 &&(
             <div>
-              <button onClick={() => handleAttack(player)}>attack</button>
+              <button className='buttonFight' onClick={() => handleAttack(player)}>attack</button>
             </div>
           )}
           

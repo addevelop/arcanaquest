@@ -1,12 +1,9 @@
-import React from 'react';
-//import Navigation from '../components/Navigation';
+import React from 'react'
 
-const Home = () => {
-    return (
-        <div>
-            <h1>ArcanaQuest</h1>
-        </div>
-    );
+function Home() {
+  return (
+    <div>Home</div>
+  )
 }
 
-export default Home;
+export default Home

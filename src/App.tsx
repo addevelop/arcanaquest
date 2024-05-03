@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home/home";
-import Fight from "./components/Fight/fight";
 import './App.css';
-
+import CharacterService from './services/CharacterService';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home/Home';
+import NoPage from './components/NoPage/NoPage';
+import Fight from './components/Fight/Fight';
 function App() {
+
+  useEffect(() => {
+    const getCharac = async () => {
+      console.log(await CharacterService.getCharacters());
+    }
+    getCharac();
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route index element={<Home />} />
+          <Route path="/fight" element={<Fight />} />
+          <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

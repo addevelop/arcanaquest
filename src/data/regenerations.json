@@ -1,0 +1,26 @@
+{
+    "regenerations":
+    [
+        {
+            "id":1,
+            "name":"supra",
+            "life_min": 20,
+            "life_max": 30,
+            "time_reg": 1000
+        },
+        {
+            "id":2,
+            "name":"mega",
+            "life_min": 30,
+            "life_max": 40,
+            "time_reg": 1000
+        },
+        {
+            "id":3,
+            "name":"ultra",
+            "life_min": 50,
+            "life_max": 60,
+            "time_reg": 1000
+        }
+    ]
+}

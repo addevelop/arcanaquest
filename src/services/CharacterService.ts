@@ -13,7 +13,7 @@ class CharacterService
         {
             const data: any = await THttp.getData(CHARACTER);
 
-            if('charaters' in data)
+            if('characters' in data)
             {
                 const characters = data.characters as ICharacter[];
                 return characters;

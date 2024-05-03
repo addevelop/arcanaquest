@@ -7,10 +7,14 @@ function Fight() {
     
     const [players, setPlayers] = useState<Player[]>([])
 
+    const randomNumber = Math.floor(Math.random() * 4) + 1;
+
+    console.log(randomNumber);
+
     useEffect(() => {
         const fetchData = async () => {
             const character1 = await CharacterService.getCharacterById(1);
-            const character2 = await CharacterService.getCharacterById(2);
+            const character2 = await CharacterService.getCharacterById(randomNumber);
 
             const player1 = new Player(false, character1, 1);
             const player2 = new Player(true, character2, 2);

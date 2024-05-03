@@ -2,27 +2,36 @@
   "characters": [
     {
         "id": 1,
-      "name": "Guerrier X",
-      "picture": "guerrier.png",
+      "name": "Isaac",
+      "picture": "IsaacART.png",
       "profil": "Puissant combattant spécialisé dans le corps à corps.",
       "life": 100,
       "attacks": [1, 2]
     },
     {
         "id": 2,
-      "name": "Mage Y",
-      "picture": "mage.png",
+      "name": "Ryuk",
+      "picture": "RyukART.png",
       "profil": "Utilisateur de la magie, capable de lancer de puissants sorts.",
       "life": 80,
-      "attacks": [3, 4]
+      "attacks": [7, 8]
     },
     {
         "id": 3,
-      "name": "Archer Z",
-      "picture": "archer.png",
+      "name": "Sans",
+      "picture": "SansART.png",
       "profil": "Maître de l'arc et des flèches, agile et précis.",
       "life": 90,
       "attacks": [5, 6]
-    }
+    },
+
+    {
+      "id": 4,
+    "name": "Pikachu",
+    "picture": "PikachuART.png",
+    "profil": "Pika pika",
+    "life": 90,
+    "attacks": [3, 4]
+  }
   ]
 }

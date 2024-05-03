@@ -1,0 +1,25 @@
+h2{
+    text-align: center;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    font-family: "Jersey 10", sans-serif;
+    margin-top: -100px;
+}
+
+.boxChamp{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.boxChamp :hover{
+    box-shadow: rgba(191, 136, 136, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    margin: 100px 200px 0px 200px;
+    justify-content: space-between;
+}

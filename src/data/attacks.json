@@ -48,7 +48,25 @@
           "damage-max": 60,
         "time_reg": 1000
 
-        }
+        },
+
+        {
+          "id": 7,
+        "name": "Lancer de pomme",
+        "damage_min": 15,
+        "damage-max": 20,
+      "time_reg": 1000
+
+      },
+
+      {
+        "id": 8,
+      "name": "Death note",
+      "damage_min": 70,
+      "damage-max": 80,
+    "time_reg": 1000
+
+    }
     ]
     
 }

@@ -3,6 +3,7 @@ import Player from '../../classes/Player'
 import CharacterService from '../../services/CharacterService'
 import IAttack from '../../Interfaces/Attack'
 import AttackService from '../../services/AttackService'
+import ICharacter from '../../Interfaces/Character'
 function Fight() {
     
     const [players, setPlayers] = useState<Player[]>([])
@@ -13,7 +14,21 @@ function Fight() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const character1 = await CharacterService.getCharacterById(1);
+            let character1 : ICharacter | undefined;
+            const queryParameters = new URLSearchParams(window.location.search)
+            const user  = queryParameters.get("character");
+            console.log("user recuperer : " ,user);
+            if(user)
+            {
+              const idCharacter : number = +user;
+              character1 = await CharacterService.getCharacterById(idCharacter);
+             
+            }
+            else{
+              character1 = await CharacterService.getCharacterById(1);
+             
+            }
+            
             const character2 = await CharacterService.getCharacterById(randomNumber);
 
             const player1 = new Player(false, character1, 1);

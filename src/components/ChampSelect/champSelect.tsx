@@ -34,7 +34,7 @@ function ChampSelect() {
             <div key={character.id}>{character.name}
                 
                 
-                <button onClick={() => {window.location.href = '/fight'}}><img className="boxChamp" src={ `./img/${character.picture}`} alt="champion"/></button>
+                <button onClick={() => {window.location.href = `/fight?character=${character.id}`}}><img className="boxChamp" src={ `./img/${character.picture}`} alt="champion"/></button>
                 
             </div>
             ))}  

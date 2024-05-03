@@ -1,5 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home/home";
+import Fight from "./components/Fight/fight";
 import './App.css';
 
 function App() {

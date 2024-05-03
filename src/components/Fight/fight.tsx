@@ -1,7 +1,7 @@
 import React from 'react';
 //import Navigation from '../components/Navigation';
 
-const Home = () => {
+const Fight = () => {
     return (
         <div>
             <h1>ArcanaQuest</h1>
@@ -9,4 +9,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Fight;

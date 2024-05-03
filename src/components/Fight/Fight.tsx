@@ -31,10 +31,31 @@ function Fight() {
             
             const character2 = await CharacterService.getCharacterById(randomNumber);
 
-            const player1 = new Player(false, character1, 1);
-            const player2 = new Player(true, character2, 2);
+            const start =  Math.floor(Math.random() * (2) + 1);
+            console.log("start joueur : ",start);
 
-            setPlayers([player1, player2]);
+            switch(start){
+              case 1:{
+                const player1 = new Player(true, character1, 1);
+                const player2 = new Player(false, character2, 2);
+                setPlayers([player1, player2]);
+                break;
+              }
+              case 2:{
+                const player1 = new Player(false, character1, 1);
+                const player2 = new Player(true, character2, 2);
+                setPlayers([player1, player2]);
+                break;
+              }
+              default: { 
+                const player1 = new Player(false, character1, 1);
+                const player2 = new Player(true, character2, 2);
+                setPlayers([player1, player2]);
+                break; 
+              } 
+            }
+
+
         }
         fetchData();
         
@@ -53,6 +74,7 @@ function Fight() {
       console.log(p.lastAttack)
       const damage_min = p.lastAttack?.damage_min;
       const damage_max = p.lastAttack?.damage_max;
+      console.log("dommage min :" , damage_min, " dommage max : ", damage_max)
       if(damage_min && damage_max)
       {
         const damage = Math.floor(Math.random() * (damage_max - damage_min)) + damage_min;
@@ -75,6 +97,18 @@ function Fight() {
       {
         const damage = 0
         console.log("dommage :", damage);
+        if(oppenent?.character?.life)
+          {
+            const oppenent_life   = oppenent.character.life - damage;
+            oppenent.character.life = oppenent_life;
+            oppenent.turnToPlay = true;
+            p.turnToPlay = false;
+
+            setPlayers(prevPlayers => prevPlayers.map(player => player.id === oppenent.id ? oppenent : player));
+
+            console.log(oppenent);
+            console.log(p);
+          }
       }
     }
 
@@ -96,7 +130,7 @@ function Fight() {
             {player.character?.life}
           </div>
           <div>
-              { player.character?.life && player.character.life < 0 && (
+              { player.character?.life && player.character.life <+ 0 && (
                   <div>
                       Game over
                   </div>
@@ -105,12 +139,19 @@ function Fight() {
           <div>
             {player.character?.name}
           </div>
+          <div>
+            <img className="boxChamp" src={ `./img/${player.character?.picture}`} alt="champion"/>
+          </div>
           <select onChange={(e) => handleChangeAttack(e.target.value, player)}>
             {player.character?.attacks.map((attack, index) => (
-              <option key={`attack-${attack.id}`} value={attack.id}>{attack.name}</option>
+              <>
+              <option value="">--Please choose an option--</option>
+              <option id={`attackPlayer${player.id}`} key={`attack-${attack.id}`} value={attack.id}>{attack.name}</option>
+              </>
             ))}
+            
           </select>
-          { player.turnToPlay && player.character?.life && player.character?.life>0 &&(
+          { player.turnToPlay && player.character?.life && player.character?.life >0 &&(
             <div>
               <button onClick={() => handleAttack(player)}>attack</button>
             </div>

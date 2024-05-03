@@ -8,7 +8,16 @@ function Fight() {
     
     const [players, setPlayers] = useState<Player[]>([])
 
-    const randomNumber = Math.floor(Math.random() * 4) + 1;
+    
+    const generateRandomNumber = () => {
+      let newRandomNumber = Math.floor(Math.random() * 4) + 1;
+      while (players.some(player => player.id === newRandomNumber)) {
+        newRandomNumber = Math.floor(Math.random() * 4) + 1;
+      }
+      return newRandomNumber;
+    }
+
+    const randomNumber = generateRandomNumber();
 
     console.log(randomNumber);
 
